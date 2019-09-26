@@ -20,6 +20,8 @@ var render = function (done) {
 };
 
 var filter = function (options, token, links) {
+    links.color = 'navbar-light';
+    links.fixed = true;
     if (token) {
         return links;
     }
