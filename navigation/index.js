@@ -7,15 +7,23 @@ var context;
 var ready = false;
 
 var render = function (done) {
-    $.ajax({
-        url: utils.resolve('accounts:///apis/v/menus/5'),
-        dataType: 'json',
-        success: function (links) {
-            done(null, links);
-        },
-        error: function (xhr, status, err) {
-            done(err || status || xhr);
+    async.parallel({
+        www: function (parallelDone) {
+            utils.menus('www', parallelDone);
         }
+    }, function (err, menus) {
+        if (err) {
+            return done(err);
+        }
+        done(null, {
+            root: {url: 'www://', title: 'serandives'},
+            home: {url: '/', title: 'serandives'},
+            global: menus.www,
+            local: [],
+            user: [
+                {url: 'accounts://', title: 'Account'}
+            ]
+        });
     });
 };
 
