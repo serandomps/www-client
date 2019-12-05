@@ -10,7 +10,7 @@
         "serandomps/utils": "master",
         "serandomps/token": "master",
         "serandomps/navigation": "master",
-        "serandomps/vehicles": "master",
+        "serandomps/model-vehicles": "master",
         "serandomps/gallery": "master"
     },
     "scripts": [
