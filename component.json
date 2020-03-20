@@ -16,14 +16,17 @@
     "scripts": [
         "index.js",
         "navigation/index.js",
-        "home/index.js"
+        "home/index.js",
+        "imprint/index.js"
     ],
     "styles": [
         "index.css",
-        "home/styles.css"
+        "home/styles.css",
+        "imprint/styles.css"
     ],
     "templates": [
-        "home/template.html"
+        "home/template.html",
+        "imprint/template.html"
     ],
     "main": "index.js"
 }
