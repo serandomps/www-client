@@ -8,6 +8,7 @@
         "serandomps/auth": "master",
         "serandomps/user": "master",
         "serandomps/utils": "master",
+        "serandomps/watcher": "master",
         "serandomps/token": "master",
         "serandomps/navigation": "master",
         "serandomps/model-vehicles": "master",

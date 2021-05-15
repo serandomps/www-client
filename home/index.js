@@ -8,7 +8,8 @@ module.exports = function (ctx, container, options, done) {
     var sandbox = container.sandbox;
     dust.render('www-home', serand.pack({
         autos: utils.resolve('autos://'),
-        realestates: utils.resolve('realestates://')
+        realestates: utils.resolve('realestates://'),
+        classifieds: utils.resolve('classifieds://')
     }, container), function (err, out) {
         if (err) {
             return done(err);
